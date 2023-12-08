@@ -33,7 +33,7 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.AnimalRowH
 
     @Override
     public void onBindViewHolder(@NonNull AnimalRowHolder holder, int position) {
-        holder.txtAnimalName.setText(animalData.get(position).getImage());
+        holder.txtAnimalName.setText(animalData.get(position).getName());
         holder.imgAnimal.setImageResource(animalData.get(position).getImage());
     }
 
