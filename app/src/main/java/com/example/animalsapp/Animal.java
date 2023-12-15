@@ -1,8 +1,8 @@
 package com.example.animalsapp;
 
 public class Animal {
-    String name;
-    int image;
+    private String name;
+    private int image;
 
     public Animal(String name, int image){
         this.name = name;

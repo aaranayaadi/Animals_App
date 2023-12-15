@@ -13,6 +13,11 @@
         android:theme="@style/Theme.AnimalsApp"
         tools:targetApi="31">
         <activity
+            android:name=".AnimalInfo"
+            android:exported="false"
+            android:label="@string/title_activity_animal_info"
+            android:theme="@style/Theme.AnimalsApp" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

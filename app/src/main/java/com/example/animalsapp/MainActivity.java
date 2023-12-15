@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -36,5 +37,9 @@ public class MainActivity extends AppCompatActivity implements AnimalAdapter.MyC
     }
     public void onItemClick(int positionOfTheAnimal){
         Toast.makeText(this, "Clicked "+animals.get(positionOfTheAnimal).getName(), Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, AnimalInfo.class);
+        intent.putExtra("image",animals.get(positionOfTheAnimal).getImage());
+        intent.putExtra("name", animals.get(positionOfTheAnimal).getName());
+        startActivity(intent);
     }
 }
